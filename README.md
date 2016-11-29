@@ -2,8 +2,8 @@
 
 Sample project to show how to encrypt data using .Net Core.
 
-'
-        public static string GenerateKey()
+~~~~
+	public static string GenerateKey()
         {
             using (TripleDES tripleDES = TripleDES.Create())
             {
@@ -28,6 +28,7 @@ Sample project to show how to encrypt data using .Net Core.
             }
 
         }
+
         public static string Decrypt(string input, string key)
         {
             byte[] inputArray = Convert.FromBase64String(input);
@@ -41,4 +42,4 @@ Sample project to show how to encrypt data using .Net Core.
                 return UTF8Encoding.UTF8.GetString(resultArray);
             }
         }
-'
+~~~~
